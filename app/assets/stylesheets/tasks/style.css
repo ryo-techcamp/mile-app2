@@ -1,0 +1,255 @@
+body {background-color: #b5f1df; }
+
+.top {
+  position: relative;
+}
+.top-image {
+  width: 100%;
+  height: 500px;
+}
+
+.mainVisualText {
+  color: #FFF;
+  background-color: rgba(0,0,0,0.4);
+  width: 50%;
+  height: 15%;
+  padding: 15px 25px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+
+.mainVisualText h1 {
+  font-size: 100%;
+  line-height: 1.231;
+  margin-top: 0;
+}
+
+.pointsite-image {
+width: 300px;
+height: 163px;
+}
+
+
+
+/* 商品一覧 */
+
+.item-contents {
+  background-color:  #b5f1df;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+  width: 100%;
+}
+
+.item-contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.item-contents>.subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: #3ccace;
+  font-weight: bold;
+}
+
+.item-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  margin: 0vw 2vw;
+  background-color:  #b5f1df;
+}
+
+
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 33vh;
+  height: 28vh;
+}
+
+.sold-out {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  background-color: crimson;
+  transform: skewY(-10deg);
+}
+
+.sold-out>span {
+  color:  #b5f1df;
+  font-size: 45px;
+  font: bold;
+}
+
+
+.item-info {
+  background-color: #b5f1df;
+  color: black;
+  padding: 1vw;
+}
+
+.item-name {
+  font-size: 2.5vh;
+}
+
+.item-price {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/* //商品一覧 */
+
+/*「つくったもの」INDEX*/
+
+.portfolioIndex {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  }
+  
+  .portfolioIndex:after {
+  content: "";
+  clear: both;
+  display: block;
+  }
+  
+  .portfolioIndex article {
+  width: 20vw;
+  margin: 0 40px;
+  }
+  
+  
+  .portfolioIndex article h2 {
+  font-size: 18px;
+  margin: 5px 0;
+  }
+  
+  .portfolioIndex article p {
+  margin-top: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  }
+  /* //「つくったもの」INDEX */
+
+.clearfix {
+  margin-top: 200px;
+}
+
+.profile_clearfix{
+  margin: 20px;
+}
+
+.icon{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.milertxt{
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/* FURIMAが選ばれる3つの理由部分 */
+.select-reason-contents {
+  padding: 5vh 15vw;
+}
+
+.select-reason-contents>.title {
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.select-reason-contents>.title::after {
+  content: '';
+  width: 70px;
+  height: 4px;
+  background-color: #3ccace;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reason-lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.reason-lists>.list {
+  width: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.list-pict {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.reason-list-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+  background-color: #3ccace;
+  color: #fff;
+}
+
+.reason-list-text {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 50px;
+}
+
+.reason-list-blue-text {
+  color: #3ccace;
+}
+
+.reason-list-description {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* //FURIMAが選ばれる3つの理由部分 */
+
+.point {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+.clearfix {
+  display: flex;
+  width: 100%;
+}

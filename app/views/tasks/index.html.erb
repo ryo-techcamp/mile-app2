@@ -1,1 +1,220 @@
-<h1>Top page</h1>
+ <!DOCTYPE html>
+<html lang="ja">
+
+<head>
+ <meta charset="utf-8">
+ <title>マイルで参る</title>
+ <meta name="description" content="日々の買い物、隙間時間を利用してタダで飛行機に乗って海外旅行をしよう!!">
+ <link rel="stylesheet" href="./normalize.css">
+ <link rel="stylesheet" href="./style.css">
+ 
+ <script src="common/js/jquery-1.10.1.min.js"></script>
+ <script src="common/js/jqueryt.bxslider/jquery.bxslider.js"></script>
+ <link rel="stylesheet" href="common/js/jquery.bxslider/jquery.bxslider.css">
+ 
+ <script>
+ $(document).ready(function() {
+     $(`.bxslider`).bxslider( {
+         auto: true,
+         speed: 1000,
+         pause:4000..     
+  }  );
+  });
+  </script>
+     
+ 
+  </head>
+ <body>
+ 
+ <%# <div id="page">
+ 
+ <p class="topicPath"><a href="index.html">ホーム</a> &gt;つくったもの</p>
+ 
+ 
+ <div id="pageBodyMain">
+ 
+ <section>
+ 
+ <h1 class="pageTitle">つくったもの</h1> %>
+ <div class="top">
+<%= image_tag "haneda.jpg", class: 'top-image'%>
+<div class="mainVisualText">
+<h1>陸マイラー専門コミュニティー<br>お得なポイントサイト情報を共有してマイレージを貯めよう!!</h1>
+</div>
+</div>
+
+
+   <div class='item-contents'>
+    <h2 class='title'>おすすめ案件共有</h2>
+    <%= link_to 'みんなで共有しよう', "#", class: "subtitle" %>
+    <ul class='item-lists'>
+ 
+      <% @tasks.each do |task|%>
+      <li class='list'>
+        <%= link_to task_path(task.id) ,method: :get do %>
+        <div class='item-img-content'>
+        <%= image_tag task.image,  class: 'item-img'  %>
+           <%# <% if item.buyer.present? %>  
+          <%# <div class='sold-out'>
+            <span>Sold Out!!</span>
+          </div>
+           <% end %>   
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= task.name %>
+          </h3>
+          <div class='item-price'>
+            <span><%= task.price %>P</span>
+          </div>
+        </div>
+        <% end %>
+      <%end%>
+    </ul>
+  </div>
+
+
+<section class="profile_clearfix">
+<div class="profile-txt">
+<h1 class="point">陸マイラーとは</h1>
+<p class="milertxt"><span>陸マイラー（おかまいらー／りくまいらー）</span>とは、飛行機に乗らずして航空会社のマイル（マイレージ）を貯めている人たちのことです。</p>
+</div>
+</section>
+
+<section class="profile_clearfix">
+<div class="profile-txt">
+<h1 class="point">飛行機に乗らずにマイルを獲得する方法</h1>
+<p class="milertxt">結論を言うとポイントサイトで貯めたポイントを航空会社のマイレージに交換することで、飛行機に乗らなくてもマイレージを貯められます。</p>
+</div>
+</section>
+
+  <div class='select-reason-contents'>
+    <h2 class='title'>
+      ポイントからマイレージになるまでの流れ
+    </h2>
+    <ul class='reason-lists'>
+      <li class='list'>
+        <%= image_tag "point.png", class:"list-pict" %>
+        <span class='reason-list-number'>1</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>ポイントサイト</span>
+          でポイント獲得!
+        </h3>
+        <p class='reason-list-description'>
+          スキマ時間に簡単作業するだけ!
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "ana.svg", class:"list-pict" %>
+        <span class='reason-list-number'>2</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>マイレージ</span>
+          に交換しよう!
+        </h3>
+        <p class='reason-list-description'>
+          ポイントサイトからマイレージに交換申請しよう!
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "1179.png", class:"list-pict" %>
+        <span class='reason-list-number'>3</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>特典航空券</span>を予約!
+        </h3>
+        <p class='reason-list-description'>
+          マイレージが貯まったらさっそく旅に出よう!
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <section class="profile_clearfix">
+<div class="profile-txt">
+<h1 class="point">当サイトの目的</h1>
+<p class="milertxt">当サイトでは複数のポイントサイトで達成した案件を容易に管理することを可能にします。
+また、おすすめ案件投稿機能により他の陸マイラー仲間と情報共有し、協力し合う事ができます。マイレージを短期間でより効率的に貯めるには複数あるポイントサイトを駆使してポイントを貯めることにあります。
+その中の問題で、どのポイントサイトでどのような案件を達成したのかを管理することは非常に困難です。そんな問題を当サイトでは解決いたします。</p>
+</div>
+</section>
+
+<h1 class="point">ポイントサイト未登録の方はコチラから↓</h1>
+<section class="portfolioIndex">
+<article>
+<a href="https://pc.moppy.jp/entry/invite.php?invite=YamKe1c4">
+<%= image_tag "moppy.jpg", class: 'pointsite-image'%>
+</a>
+<h2><a href="https://pc.moppy.jp/entry/invite.php?invite=YamKe1c4">モッピー登録はこちらから</a></h2>
+<p>優良案件多数、ポイント加算までの対応早く安心してご利用いただけます!</p>
+</article>
+
+<article>
+<a href="https://hapitas.jp/register?i=20736729&route=pcText">
+<%= image_tag "hapitas.jpg", class: 'pointsite-image'%>
+</a>
+<h2><a href="https://hapitas.jp/register?i=20736729&route=pcText">ハピタス登録はこちらから</a></h2>
+<p>優良案件多数、ポイント加算までの対応早く安心してご利用いただけます!</p>
+</article>
+
+<article>
+<a href="http://www.chobirich.com/cm/ad/?p=8224777069&i=3187853">
+<%= image_tag "rich.jpg", class: 'pointsite-image'%>
+</a>
+<h2><a href="http://www.chobirich.com/cm/ad/?p=8224777069&i=3187853">ちょびリッチ登録はこちらから</a></h2>
+<p>優良案件多数、ポイント加算までの対応早く安心してご利用いただけます!</p>
+</article>
+
+<article>
+<a href="http://amex.jp/share/jQkY9?CPID=100220471">
+<%= image_tag "amex.jpg", class: 'pointsite-image'%>
+</a>
+<h2><a href="http://amex.jp/share/jQkY9?CPID=100220471">LXホテルに無料宿泊ができるSPGカード</a></h2>
+<p>憧れのホテルに無料で宿泊ができる夢のようなカード！</p>
+</article>
+
+</section> 
+
+  <!-- wrap始まり -->
+  <body class="video">
+  <div id="wrap" class="clearfix">
+    <div class="content">
+      <div class="main">
+        <h2 class="point">~参考動画~</h2>
+        <h2 class="point">ポイントからマイルに変換までの流れ</h2>
+        <section class="movie">
+          <iframe width="400" height="250" src="https://www.youtube.com/embed/zk2G0hVr1rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section class="short-film">
+          <h2 class="point">TOKYUルートについての解説動画</h2>
+			<iframe width="400" height="250" src="https://www.youtube.com/embed/BO11y0DK01U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+    </div>
+  </div>
+  </body>
+  <!-- wrap終わり -->
+
+<%# <section class="news">
+<h1>おしらせ</h1>
+<table>
+<tr>
+<th><time datetime="2013-10-01">2013年10月1日</time></th>
+<td>コモモとモリコで、書籍「HTML/CSSの教科書（仮題）」を執筆中です。お楽しみに。</td>
+</tr>
+<tr>
+<th><time datetime="2013-10-01">2013年10月1日</time></th>
+<td>
+コモモ・モリコ・ひろましゃ３人のサイト「komorikomasha」をオープンしました。<br>
+３人で制作したウェブページやサイトやサービス、その他諸々の活動を紹介・お知らせしていく予定です。どうぞよろしくお願いいたします。
+</td>
+</tr>
+</table>
+</section> %>
+
+
+</div>
+
+<p class="pagetop"><a href="#page">ページの先頭へ戻る</a></p>
+
+</div>
+
+ </body>
+ </html>

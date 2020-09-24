@@ -1,15 +1,80 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MileApp2</title>
+    <title>MileApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+   <header id="pageHead">
+ <h1 id="siteTitle">マイルで参る</h1>
+ <p id="catchcopy">~日々の買い物、隙間時間を利用してタダで飛行機に乗って海外旅行をしよう!!~</p>
+
+ <nav class="globalNavi">
+ <ul>
+ <li ><a href="/tasks">ホーム</a></li>
+ <li><a href="/tasks/new">案件を共有</a></li>
+ <li><a href="#">獲得マイルの確認</a></li>
+  <%# <li>
+          <% if user_signed_in? %>
+          <%# <div class="user_nav grid-6">
+           <li><%= link_to  current_user.nick_name, user_session_path, class: "user-nickname"%></li>
+            <%# <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li> 
+          <%# </div>
+        <% else %>
+          <%# <div class="grid-6"> %>
+            <%# <li><%= link_to "ログイン", new_user_session_path, class: "post" %></li>
+            <%# <li><%= link_to "新規登録", new_user_registration_path, class: "post" %></li> 
+          <%# </div> %> 
+        <%# <% end %> 
+  <%# </li> %> 
+    <%# <li><%= link_to "お問い合わせ",  contacts_path, class: "post" %></li> 
+ </ul>
+ </nav>
+ 
+ </header>
     <%= yield %>
-  </body>
+</body>
+
+<div class='ad-footer-contents'>
+ <%= image_tag "footer.jpg", class: 'top-image'%>
+  <p class='ad-footer-explain'>
+    だれでもかんたん、人生を変える陸マイラー生活</p>
+</div>
+
+<div class='footer'>
+  <div class='footer-contents'>
+    <div class='furima-details'>
+      <h2 class='footer-content-head'>当サイトについて</h2>
+      <ul>
+        <li><%= link_to '会社概要（運営会社)', "#", class: "footer-link" %></li>
+        <li><%= link_to 'プライバシーポリシー', "#", class: "footer-link" %></li>
+        <li><%= link_to 'サイト利用規約', "#", class: "footer-link" %></li>
+        <li><%= link_to 'ポイントに関する特約', "#", class: "footer-link" %></li>
+      </ul>
+    </div>
+    <div class='furima-details'>
+      <h2 class='footer-content-head'>他サイトを見る</h2>
+      <ul>
+        <li><%= link_to 'カテゴリー一覧', "#", class: "footer-link" %></li>
+        <li><%= link_to 'ブログ一覧', "#", class: "footer-link" %></li>
+      </ul>
+    </div>
+    <div class='furima-details'>
+      <h2 class='footer-content-head'>マイルについて</h2>
+      <ul>
+        <li><%= link_to 'Maileガイド', "#", class: "footer-link" %></li>
+        <li><%= link_to 'ロゴ利用ガイドライン', "#", class: "footer-link" %></li>
+        <li><%= link_to 'お知らせ', "#", class: "footer-link" %></li>
+      </ul>
+    </div>
+  </div>
+  <%= link_to image_tag("1179.png", class:"logo-white"), "#" %>
+  <p>© MILE</p>
+</div>
+
 </html>
