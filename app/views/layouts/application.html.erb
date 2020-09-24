@@ -19,20 +19,20 @@
  <li ><a href="/tasks">ホーム</a></li>
  <li><a href="/tasks/new">案件を共有</a></li>
  <li><a href="#">獲得マイルの確認</a></li>
-  <%# <li>
+  <li>
           <% if user_signed_in? %>
-          <%# <div class="user_nav grid-6">
+          <div class="user_nav grid-6">
            <li><%= link_to  current_user.nick_name, user_session_path, class: "user-nickname"%></li>
-            <%# <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li> 
-          <%# </div>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li> 
+          </div>
         <% else %>
-          <%# <div class="grid-6"> %>
-            <%# <li><%= link_to "ログイン", new_user_session_path, class: "post" %></li>
-            <%# <li><%= link_to "新規登録", new_user_registration_path, class: "post" %></li> 
-          <%# </div> %> 
-        <%# <% end %> 
-  <%# </li> %> 
-    <%# <li><%= link_to "お問い合わせ",  contacts_path, class: "post" %></li> 
+          <div class="grid-6"> 
+            <li><%= link_to "ログイン", new_user_session_path, class: "post" %></li>
+            <li><%= link_to "新規登録", new_user_registration_path, class: "post" %></li> 
+          </div> 
+         <% end %> 
+  </li> 
+    <%# <li><%= link_to "お問い合わせ",  contacts_path, class: "post" %></li>  
  </ul>
  </nav>
  
